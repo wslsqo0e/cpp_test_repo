@@ -5,7 +5,7 @@ jobs:
   CI:
     strategy:
       matrix:
-        os: [ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-22.04]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Jimver/cuda-toolkit@v0.2.17
