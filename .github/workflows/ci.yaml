@@ -12,5 +12,5 @@ jobs:
         id: cuda_toolkit
         with:
           cuda: '12.5.0'
-      - run: echo "Installed cuda version is: ${{steps.cuda_toolkit.outputs.cuda}}"
+      - run: echo "All outputs: ${{ toJSON(steps.cuda-toolkit.outputs) }}"
       - run: nvcc -V
