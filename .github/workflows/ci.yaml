@@ -9,8 +9,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Jimver/cuda-toolkit@v0.2.17
-        id: cuda-toolkit
+        id: cuda_toolkit
         with:
           cuda: '12.5.0'
-
+      - run: echo "Installed cuda version is: ${{steps.cuda_toolkit.outputs.cuda}}"
       - run: nvcc -V
